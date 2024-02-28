@@ -1,0 +1,62 @@
+/* Example CSS Program with Detailed Explanation */
+
+/* Universal Selector: Applies to all elements in the document */
+* {
+  box-sizing: border-box; /* Changes the default CSS box model to include padding and border in the element's total width and height */
+  margin: 0; /* Removes the default margin from all elements */
+  padding: 0; /* Removes the default padding from all elements */
+}
+
+/* Body Selector: Targets the <body> element */
+body {
+  font-family: 'Arial', sans-serif; /* Sets the default font of the document */
+  background-color: #f4f4f4; /* Sets a light grey background color */
+  line-height: 1.6; /* Sets the default line height */
+  padding: 20px; /* Adds padding around the content of the body */
+  color: #333; /* Sets the default text color to dark grey */
+}
+
+/* Header Selector: Targets elements with the class name "header" */
+.header {
+  background: #333; /* Sets the background color of the header to dark grey */
+  color: #fff; /* Sets the text color in the header to white */
+  padding: 20px 0; /* Adds vertical padding but no horizontal padding to the header */
+  text-align: center; /* Centers the text horizontally within the header */
+}
+
+/* Navigation Selector: Targets <nav> elements */
+nav {
+  display: flex; /* Uses the Flexbox layout to distribute space among items in a container */
+  justify-content: center; /* Centers the flex items on the main axis (horizontally) */
+  padding: 10px 0; /* Adds vertical padding but no horizontal padding to the navigation */
+  background: #444; /* Sets the background color of the navigation to a slightly lighter grey than the header */
+}
+
+/* Navigation Link Selector: Targets <a> elements inside <nav> */
+nav a {
+  color: #fff; /* Sets the color of navigation links to white */
+  text-decoration: none; /* Removes the underline from links */
+  padding: 0 15px; /* Adds horizontal padding to each link */
+}
+
+/* Navigation Link Hover Selector: Changes the link style on hover */
+nav a:hover {
+  background: #555; /* Changes the background color of the link when hovered */
+}
+
+/* Main Selector: Targets the <main> element */
+main {
+  padding: 20px; /* Adds padding around the content of the main element */
+  background: #fff; /* Sets the background color of the main content area to white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the main content area */
+}
+
+/* Footer Selector: Targets the <footer> element */
+footer {
+  background: #333; /* Sets the background color of the footer to dark grey */
+  color: #fff; /* Sets the text color in the footer to white */
+  text-align: center; /* Centers the text horizontally within the footer */
+  padding: 10px 0; /* Adds vertical padding but no horizontal padding to the footer */
+}
+
+/* This CSS program demonstrates various CSS selectors and properties to style a basic web page layout. It includes styles for the body, header, navigation, main content, and footer, implementing a consistent look and feel across the page. It uses the Flexbox layout model for the navigation bar to evenly space and center the navigation links. Additionally, it incorporates box-sizing, padding, background colors, text colors, and box shadows to enhance the visual appeal of the page. */
