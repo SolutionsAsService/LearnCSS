@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS - Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn CSS - Flexbox</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">CSS Basics</a></li>
+                <li><a href="selectors.html">Selectors</a></li>
+                <li><a href="box-model.html">Box Model</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
+                <li><a href="grid.html">CSS Grid</a></li>
+                <li><a href="animations.html">Animations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is Flexbox?</h2>
+            <p>The Flexible Box Layout Module, commonly known as Flexbox, is a CSS layout model that allows you to design complex layouts with ease. It provides an efficient way to align and distribute space among items in a container, even when their sizes are dynamic or unknown.</p>
+        </section>
+
+        <section>
+            <h2>Key Concepts of Flexbox</h2>
+            <ul>
+                <li><strong>Flex Container:</strong> The parent element that contains flex items. It is defined by setting the <code>display</code> property to <code>flex</code> or <code>inline-flex</code>.</li>
+                <li><strong>Flex Items:</strong> The child elements of a flex container. They can be controlled and arranged within the container using various flex properties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Common Flexbox Properties</h2>
+            <h3>Flex Container Properties</h3>
+            <ul>
+                <li><code>display: flex;</code></li>
+                <li><code>flex-direction</code>: Defines the direction of the flex items (row, column, row-reverse, column-reverse).</li>
+                <li><code>justify-content</code>: Aligns items along the main axis (flex-start, flex-end, center, space-between, space-around).</li>
+                <li><code>align-items</code>: Aligns items along the cross axis (flex-start, flex-end, center, baseline, stretch).</li>
+                <li><code>flex-wrap</code>: Controls whether items wrap onto multiple lines (nowrap, wrap, wrap-reverse).</li>
+            </ul>
+
+            <h3>Flex Item Properties</h3>
+            <ul>
+                <li><code>order</code>: Defines the order of the flex item.</li>
+                <li><code>flex-grow</code>: Defines how much the flex item should grow relative to the rest of the flex items.</li>
+                <li><code>flex-shrink</code>: Defines how much the flex item should shrink relative to the rest of the flex items.</li>
+                <li><code>flex-basis</code>: Defines the initial size of the flex item.</li>
+                <li><code>align-self</code>: Overrides the <code>align-items</code> property for a specific flex item.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example of Flexbox</h2>
+            <pre><code>
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    flex: 1;
+    padding: 10px;
+    background-color: lightgray;
+    margin: 5px;
+}
+            </code></pre>
+            <div class="container">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
