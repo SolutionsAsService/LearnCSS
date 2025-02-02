@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS - CSS Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn CSS - CSS Grid</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">CSS Basics</a></li>
+                <li><a href="selectors.html">Selectors</a></li>
+                <li><a href="box-model.html">Box Model</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
+                <li><a href="grid.html">CSS Grid</a></li>
+                <li><a href="animations.html">Animations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is CSS Grid?</h2>
+            <p>CSS Grid Layout is a two-dimensional layout system for the web. It allows you to create complex and responsive layouts with ease, using rows and columns to define the structure of your content.</p>
+        </section>
+
+        <section>
+            <h2>Key Concepts of CSS Grid</h2>
+            <ul>
+                <li><strong>Grid Container:</strong> The parent element that contains grid items. It is defined by setting the <code>display</code> property to <code>grid</code> or <code>inline-grid</code>.</li>
+                <li><strong>Grid Items:</strong> The child elements of a grid container. They are placed into the grid using various grid properties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Common CSS Grid Properties</h2>
+            <h3>Grid Container Properties</h3>
+            <ul>
+                <li><code>display: grid;</code></li>
+                <li><code>grid-template-columns</code>: Defines the columns of the grid.</li>
+                <li><code>grid-template-rows</code>: Defines the rows of the grid.</li>
+                <li><code>grid-gap</code>: Defines the gap between grid items.</li>
+                <li><code>justify-items</code>: Aligns grid items along the row axis.</li>
+                <li><code>align-items</code>: Aligns grid items along the column axis.</li>
+            </ul>
+
+            <h3>Grid Item Properties</h3>
+            <ul>
+                <li><code>grid-column</code>: Specifies the column start and end positions for the grid item.</li>
+                <li><code>grid-row</code>: Specifies the row start and end positions for the grid item.</li>
+                <li><code>justify-self</code>: Aligns the grid item within its column.</li>
+                <li><code>align-self</code>: Aligns the grid item within its row.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example of CSS Grid</h2>
+            <pre><code>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.item {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+            </code></pre>
+            <div class="container">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn CSS. All
