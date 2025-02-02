@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS - Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn CSS - Selectors</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">CSS Basics</a></li>
+                <li><a href="selectors.html">Selectors</a></li>
+                <li><a href="box-model.html">Box Model</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
+                <li><a href="grid.html">CSS Grid</a></li>
+                <li><a href="animations.html">Animations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>What are CSS Selectors?</h2>
+            <p>CSS selectors are patterns used to select the elements you want to style. They are an essential part of CSS as they determine which HTML elements will be affected by the styles you apply.</p>
+        </section>
+
+        <section>
+            <h2>Types of Selectors</h2>
+            <ul>
+                <li><strong>Element Selector:</strong> Selects all elements of a given type.</li>
+                <li><strong>ID Selector:</strong> Selects a single element with a specific ID.</li>
+                <li><strong>Class Selector:</strong> Selects all elements with a specific class.</li>
+                <li><strong>Attribute Selector:</strong> Selects elements based on an attribute or attribute value.</li>
+                <li><strong>Pseudo-class Selector:</strong> Selects elements based on their state (e.g., <code>:hover</code>).</li>
+                <li><strong>Pseudo-element Selector:</strong> Selects parts of an element (e.g., <code>::before</code>).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of CSS Selectors</h2>
+            <pre><code>
+/* Element Selector */
+p {
+    color: blue;
+}
+
+/* ID Selector */
+#header {
+    background-color: gray;
+}
+
+/* Class Selector */
+.intro {
+    font-size: 20px;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    border: 1px solid black;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-element Selector */
+p::first-line {
+    font-weight: bold;
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
