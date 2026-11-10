@@ -1,37 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn CSS - Basics</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basics | Learn CSS</title>
+<meta name="description" content="Learn what a CSS rule is, where to put it and which units to use, with a live editor.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Learn CSS - Basics</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </nav>
-    </header>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html" aria-current="page">Basics</a></li><li><a href="selectors.html">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html">Flexbox</a></li><li><a href="grid.html">Grid</a></li><li><a href="animations.html">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap lesson"><div class="hd"><div><p class="kicker">Lesson 1 of 6</p><h1>CSS Basics</h1><p class="lede">CSS is a list of rules. Each rule picks elements and says how they look.</p></div><div class="spec big"><div class="s-type" aria-hidden="true"><span>A</span><span>a</span><span>g</span></div></div></div><section class="lab" data-lab="sandbox" aria-labelledby="l1"><div><h2 id="l1">Edit the CSS, see the page</h2>
+<p>This box is live. Change a colour, a size, a radius.</p>
+<label for="css1" class="note">CSS</label><textarea id="css1" rows="16" spellcheck="false" autocapitalize="off">h1 {
+  color: #c93a16;
+  font-size: 2rem;
+}
 
-    <main>
-        <section>
-            <h2>Introduction to CSS</h2>
-            <p>CSS is used to style and layout web pages. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
-        </section>
-        <!-- Add more sections as needed -->
-    </main>
+p {
+  line-height: 1.6;
+  max-width: 28ch;
+}
 
-    <footer>
-        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
-    </footer>
+.card {
+  background: #fff3df;
+  padding: 1rem;
+  border-radius: 12px;
+}</textarea>
+<div class="row" style="margin-top:.7rem"><button type="button" class="ghost" data-reset>Reset</button></div></div>
+<div><iframe class="pv" title="Live preview" sandbox srcdoc="Turn on JavaScript to edit live."></iframe>
+<template><div class="card"><h1>Hello, CSS</h1><p>Styles describe how this card looks. The HTML never changes.</p></div></template></div></section><h2>Three ways to add CSS</h2>
+<p>You can write CSS in three places. Use the last one for real projects.</p>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>&lt;p style=&quot;color: coral&quot;&gt;Inline: one element only&lt;/p&gt;
+
+&lt;style&gt;
+  p { color: coral; }   /* Internal: one page */
+&lt;/style&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;   &lt;!-- External: every page --&gt;</code></pre>
+<h2>The shape of a rule</h2>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>selector {
+  property: value;
+}</code></pre>
+<p>The <b>selector</b> says which elements. Each <b>declaration</b> is a property, a colon, a value and a semicolon.</p>
+<h2>Units you will use</h2>
+<ul class="plain"><li><code>rem</code> scales with the reader's font size. Use it for type and spacing.</li><li><code>%</code> and <code>vw</code> follow the container or screen.</li><li><code>px</code> is fixed. Fine for borders, risky for text.</li></ul>
+<div class="mistake"><b>Common mistake.</b> A missing semicolon silently breaks the next line. If a style "does nothing", look one line up.</div><nav class="pager" aria-label="Next and previous lesson"><a href="index.html"><small>Back</small>Start</a><a href="selectors.html"><small>Next lesson</small>Selectors</a></nav></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
 </body>
 </html>

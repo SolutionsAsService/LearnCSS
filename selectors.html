@@ -1,83 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn CSS - Selectors</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selectors | Learn CSS</title>
+<meta name="description" content="Learn CSS selectors by typing them and seeing exactly which elements match.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Learn CSS - Selectors</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>What are CSS Selectors?</h2>
-            <p>CSS selectors are patterns used to select the elements you want to style. They are an essential part of CSS as they determine which HTML elements will be affected by the styles you apply.</p>
-        </section>
-
-        <section>
-            <h2>Types of Selectors</h2>
-            <ul>
-                <li><strong>Element Selector:</strong> Selects all elements of a given type.</li>
-                <li><strong>ID Selector:</strong> Selects a single element with a specific ID.</li>
-                <li><strong>Class Selector:</strong> Selects all elements with a specific class.</li>
-                <li><strong>Attribute Selector:</strong> Selects elements based on an attribute or attribute value.</li>
-                <li><strong>Pseudo-class Selector:</strong> Selects elements based on their state (e.g., <code>:hover</code>).</li>
-                <li><strong>Pseudo-element Selector:</strong> Selects parts of an element (e.g., <code>::before</code>).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Examples of CSS Selectors</h2>
-            <pre><code>
-/* Element Selector */
-p {
-    color: blue;
-}
-
-/* ID Selector */
-#header {
-    background-color: gray;
-}
-
-/* Class Selector */
-.intro {
-    font-size: 20px;
-}
-
-/* Attribute Selector */
-input[type="text"] {
-    border: 1px solid black;
-}
-
-/* Pseudo-class Selector */
-a:hover {
-    color: red;
-}
-
-/* Pseudo-element Selector */
-p::first-line {
-    font-weight: bold;
-}
-            </code></pre>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
-    </footer>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html">Basics</a></li><li><a href="selectors.html" aria-current="page">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html">Flexbox</a></li><li><a href="grid.html">Grid</a></li><li><a href="animations.html">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap lesson"><div class="hd"><div><p class="kicker">Lesson 2 of 6</p><h1>Selectors</h1><p class="lede">Before you style anything you have to say which elements you mean.</p></div><div class="spec big"><div class="s-sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div></div><section class="lab" data-lab="selector" aria-labelledby="l2"><div><h2 id="l2">Type a selector, see what it hits</h2>
+<p>The list on the right is real HTML. The outline shows exactly what your selector matches.</p>
+<div class="field"><label for="q">Selector</label><input type="text" id="q" value="li:nth-child(2)" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="res"></div>
+<div class="row" style="margin:.7rem 0"><button type="button" class="ghost" data-try="li">li</button><button type="button" class="ghost" data-try=".done">.done</button><button type="button" class="ghost" data-try="#now">#now</button><button type="button" class="ghost" data-try="ul &gt; li:not(.done)">li:not(.done)</button><button type="button" class="ghost" data-try="[data-tag]">[data-tag]</button></div>
+<p class="total result" id="res" role="status" aria-live="polite">Turn on JavaScript to try selectors.</p></div>
+<div><div class="stage"><div class="dom"><div>&lt;section&gt;</div><ul><li class="done">&lt;li class="done"&gt; Read</li><li class="done" data-tag>&lt;li class="done" data-tag&gt; Try</li><li id="now">&lt;li id="now"&gt; Build</li><li>&lt;li&gt; Ship</li></ul></div></div></div></section><h2>The six you need first</h2>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>p          { }  /* element: every paragraph */
+.done      { }  /* class: anything with class=&quot;done&quot; */
+#now       { }  /* id: the one element with id=&quot;now&quot; */
+li.done    { }  /* both: an li that is also .done */
+ul &gt; li    { }  /* child: li directly inside ul */
+li:hover   { }  /* state: while the pointer is over it */</code></pre>
+<h2>Specificity, the short version</h2>
+<p>When two rules disagree, the more specific selector wins: an id beats a class, a class beats an element. If they tie, the later rule wins. That is the "cascade" in Cascading Style Sheets.</p>
+<div class="mistake"><b>Common mistake.</b> Reaching for <code>!important</code>. Fix the selector instead; <code>!important</code> only makes the next conflict harder to solve.</div><nav class="pager" aria-label="Next and previous lesson"><a href="basics.html"><small>Back</small>Basics</a><a href="box-model.html"><small>Next lesson</small>Box model</a></nav></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
 </body>
 </html>

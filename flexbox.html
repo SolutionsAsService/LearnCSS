@@ -1,89 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn CSS - Flexbox</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flexbox | Learn CSS</title>
+<meta name="description" content="Learn flexbox with live controls for direction, alignment, wrapping and gap.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Learn CSS - Flexbox</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>What is Flexbox?</h2>
-            <p>The Flexible Box Layout Module, commonly known as Flexbox, is a CSS layout model that allows you to design complex layouts with ease. It provides an efficient way to align and distribute space among items in a container, even when their sizes are dynamic or unknown.</p>
-        </section>
-
-        <section>
-            <h2>Key Concepts of Flexbox</h2>
-            <ul>
-                <li><strong>Flex Container:</strong> The parent element that contains flex items. It is defined by setting the <code>display</code> property to <code>flex</code> or <code>inline-flex</code>.</li>
-                <li><strong>Flex Items:</strong> The child elements of a flex container. They can be controlled and arranged within the container using various flex properties.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Common Flexbox Properties</h2>
-            <h3>Flex Container Properties</h3>
-            <ul>
-                <li><code>display: flex;</code></li>
-                <li><code>flex-direction</code>: Defines the direction of the flex items (row, column, row-reverse, column-reverse).</li>
-                <li><code>justify-content</code>: Aligns items along the main axis (flex-start, flex-end, center, space-between, space-around).</li>
-                <li><code>align-items</code>: Aligns items along the cross axis (flex-start, flex-end, center, baseline, stretch).</li>
-                <li><code>flex-wrap</code>: Controls whether items wrap onto multiple lines (nowrap, wrap, wrap-reverse).</li>
-            </ul>
-
-            <h3>Flex Item Properties</h3>
-            <ul>
-                <li><code>order</code>: Defines the order of the flex item.</li>
-                <li><code>flex-grow</code>: Defines how much the flex item should grow relative to the rest of the flex items.</li>
-                <li><code>flex-shrink</code>: Defines how much the flex item should shrink relative to the rest of the flex items.</li>
-                <li><code>flex-basis</code>: Defines the initial size of the flex item.</li>
-                <li><code>align-self</code>: Overrides the <code>align-items</code> property for a specific flex item.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Example of Flexbox</h2>
-            <pre><code>
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item {
-    flex: 1;
-    padding: 10px;
-    background-color: lightgray;
-    margin: 5px;
-}
-            </code></pre>
-            <div class="container">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
-    </footer>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html">Basics</a></li><li><a href="selectors.html">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html" aria-current="page">Flexbox</a></li><li><a href="grid.html">Grid</a></li><li><a href="animations.html">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap lesson"><div class="hd"><div><p class="kicker">Lesson 4 of 6</p><h1>Flexbox</h1><p class="lede">Line items up in a row or a column and let the browser share the space.</p></div><div class="spec big"><div class="s-flex" aria-hidden="true"><i></i><i></i><i></i></div></div></div><section class="lab" data-lab="flex" aria-labelledby="l4"><div><h2 id="l4">Push the items around</h2>
+<div class="controls js-only"><div class="field"><label for="direction">flex-direction</label><select id="direction" name="direction"><option selected>row</option><option>row-reverse</option><option>column</option><option>column-reverse</option></select></div><div class="field"><label for="justify">justify-content</label><select id="justify" name="justify"><option>flex-start</option><option>center</option><option>flex-end</option><option selected>space-between</option><option>space-around</option><option>space-evenly</option></select></div><div class="field"><label for="align">align-items</label><select id="align" name="align"><option>stretch</option><option>flex-start</option><option selected>center</option><option>flex-end</option><option>baseline</option></select></div><div class="field"><label for="gap">gap <output for="gap" aria-live="off">8</output></label><input type="range" id="gap" name="gap" min="0" max="40" step="1" value="8"></div><div class="field"><label for="count">Items <output for="count" aria-live="off">4</output></label><input type="range" id="count" name="count" min="1" max="8" step="1" value="4"></div><div class="field"><label><input type="checkbox" name="wrap"> Wrap items</label></div></div>
+<p class="total js-only" id="fsum" role="status" aria-live="polite">Row, space-between, centred, 4 items, gap 8px.</p><p class="note no-js">Turn on JavaScript for the controls. The row to the right shows the default result.</p></div>
+<div><div class="stage"><div class="fx" style="justify-content:space-between;align-items:center;gap:8px"><i>1</i><i>2</i><i>3</i><i>4</i></div></div>
+<pre class="out" tabindex="0" role="region" aria-label="Generated CSS"><code>.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}</code></pre></div></section><h2>Two axes, two properties</h2>
+<p>A flex container has a <b>main axis</b> (the direction) and a <b>cross axis</b> across it. <code>justify-content</code> spreads items along the main axis, <code>align-items</code> along the cross axis. Change <code>flex-direction</code> above and watch the two swap jobs.</p>
+<h2>Items can ask for room</h2>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>.item { flex: 1; }          /* share spare space equally */
+.item.wide { flex: 2; }     /* take twice the share */
+.item.fixed { flex: none; width: 120px; }</code></pre>
+<div class="mistake"><b>Common mistake.</b> Putting <code>display: flex</code> on the items instead of their parent. Flex works on the children of the element that has it.</div><nav class="pager" aria-label="Next and previous lesson"><a href="box-model.html"><small>Back</small>Box model</a><a href="grid.html"><small>Next lesson</small>Grid</a></nav></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
 </body>
 </html>

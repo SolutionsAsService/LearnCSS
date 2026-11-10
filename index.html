@@ -1,71 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn CSS - Introduction</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn CSS: a hands-on guide</title>
+<meta name="description" content="Learn CSS by changing it: six short lessons with live controls that show the exact code they write.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Learn CSS</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>What is CSS?</h2>
-            <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS describes how elements should be rendered on screen, on paper, or in other media.</p>
-            <p>CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. It allows you to create visually engaging web pages, user interfaces for web applications, and much more.</p>
-        </section>
-
-        <section>
-            <h2>How is CSS Used?</h2>
-            <p>CSS can be used in several ways to style your HTML documents:</p>
-            <ul>
-                <li><strong>Inline CSS:</strong> Styles are applied directly within an HTML element using the <code>style</code> attribute.</li>
-                <li><strong>Internal CSS:</strong> Styles are defined within a <code>&lt;style&gt;</code> block in the HTML document's <code>&lt;head&gt;</code> section.</li>
-                <li><strong>External CSS:</strong> Styles are defined in a separate CSS file, which is linked to the HTML document using the <code>&lt;link&gt;</code> element.</li>
-            </ul>
-            <p>Using external CSS files is generally recommended as it keeps your HTML clean and separates content from presentation.</p>
-        </section>
-
-        <section>
-            <h2>Benefits of Using CSS</h2>
-            <ul>
-                <li><strong>Separation of Concerns:</strong> CSS allows you to separate the content (HTML) from the presentation (CSS), making it easier to maintain and update your code.</li>
-                <li><strong>Reusability:</strong> You can use the same CSS file across multiple HTML pages to ensure a consistent look and feel.</li>
-                <li><strong>Better Performance:</strong> External CSS files are cached by the browser, improving the performance of your website.</li>
-                <li><strong>Accessibility:</strong> CSS can help make your website more accessible by providing better control over the presentation of your content.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Learning CSS</h2>
-            <p>To learn more about CSS, check out the following sections:</p>
-            <ul>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Learn CSS. All rights reserved.</p>
-    </footer>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html">Basics</a></li><li><a href="selectors.html">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html">Flexbox</a></li><li><a href="grid.html">Grid</a></li><li><a href="animations.html">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero">
+<p class="kicker">A free, hands-on guide</p>
+<h1>Learn CSS by changing it.</h1>
+<p class="lede">Drag, type or toggle, and see the CSS you just made. These pictures are drawn with the CSS they teach. Six lessons, no install.</p>
+<ul class="board" aria-label="The six lessons"><li class="tile"><a href="basics.html"><div class="spec"><div class="s-type" aria-hidden="true"><span>A</span><span>a</span><span>g</span></div></div><div><span class="n">01</span> <h2>Basics</h2><span class="plain">Change colour, size and type</span></div></a></li><li class="tile"><a href="selectors.html"><div class="spec"><div class="s-sel" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div><div><span class="n">02</span> <h2>Selectors</h2><span class="plain">Pick exactly the elements you mean</span></div></a></li><li class="tile"><a href="box-model.html"><div class="spec"><div class="s-box" aria-hidden="true"><div><div><div></div></div></div></div></div><div><span class="n">03</span> <h2>Box model</h2><span class="plain">See why a box is wider than you set</span></div></a></li><li class="tile"><a href="flexbox.html"><div class="spec"><div class="s-flex" aria-hidden="true"><i></i><i></i><i></i></div></div><div><span class="n">04</span> <h2>Flexbox</h2><span class="plain">Line things up and share space</span></div></a></li><li class="tile"><a href="grid.html"><div class="spec"><div class="s-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div><span class="n">05</span> <h2>Grid</h2><span class="plain">Rows and columns that adapt</span></div></a></li><li class="tile"><a href="animations.html"><div class="spec"><div class="s-anim" aria-hidden="true"><i></i></div></div><div><span class="n">06</span> <h2>Animations</h2><span class="plain">Make it move, and let people stop it</span></div></a></li></ul>
+</div>
+<div class="wrap band">
+<section class="lab" data-lab="box" aria-labelledby="try">
+<div><p class="kicker">Try it now</p><h2 id="try">Why is my box wider than I set?</h2>
+<p>Because <code>width</code> sets only the content. Drag the sliders and watch the painted width add up.</p>
+<div class="controls js-only"><div class="field"><label for="w">Content width <output for="w" aria-live="off">140</output></label><input type="range" id="w" name="w" min="60" max="260" step="1" value="140"></div><div class="field"><label for="pd">Padding <output for="pd" aria-live="off">16</output></label><input type="range" id="pd" name="pd" min="0" max="48" step="1" value="16"></div><div class="field"><label for="bw">Border <output for="bw" aria-live="off">8</output></label><input type="range" id="bw" name="bw" min="0" max="24" step="1" value="8"></div><div class="field"><label for="mg">Margin <output for="mg" aria-live="off">24</output></label><input type="range" id="mg" name="mg" min="0" max="48" step="1" value="24"></div></div>
+<p class="total" role="status" aria-live="polite">Painted width = 140 + 2×16 + 2×8 = 188px. With margin: 236px (default content-box sizing).</p></div>
+<div><div class="stage"><div class="bm"><span class="bm-lbl">margin</span><div class="bd"><span class="bm-lbl">border</span><div class="pd"><span class="bm-lbl">padding</span><div class="ct">140 px</div></div></div></div></div>
+<pre class="out" tabindex="0" role="region" aria-label="Generated CSS"><code>.box {
+  width: 140px;
+  padding: 16px;
+  border: 8px solid;
+  margin: 24px;
+}</code></pre></div>
+</section>
+</div>
+<div class="wrap band"><h2>The path</h2><ol class="steps"><li><div><a href="basics.html">Basics</a><span>Make a page look like something.</span></div></li><li><div><a href="selectors.html">Selectors</a><span>Say which elements you mean.</span></div></li><li><div><a href="box-model.html">Box model</a><span>Every element is four nested boxes.</span></div></li><li><div><a href="flexbox.html">Flexbox</a><span>Line things up in one direction.</span></div></li><li><div><a href="grid.html">Grid</a><span>Lay things out in rows and columns.</span></div></li><li><div><a href="animations.html">Animations</a><span>Make it move, kindly.</span></div></li></ol></div>
+<div class="wrap band"><div class="card"><h2 style="margin-top:0">Who this is for</h2><p style="margin-bottom:0">You know a little HTML and want your pages to stop looking like 1997. Each lesson is a few minutes: one thing to try, then the reason. The pages use the same CSS they teach, so view the source to see it in action.</p></div></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
 </body>
 </html>

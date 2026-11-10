@@ -1,87 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn CSS - CSS Grid</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grid | Learn CSS</title>
+<meta name="description" content="Learn CSS grid with live controls for columns, gap and track sizing.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Learn CSS - CSS Grid</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="basics.html">CSS Basics</a></li>
-                <li><a href="selectors.html">Selectors</a></li>
-                <li><a href="box-model.html">Box Model</a></li>
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">CSS Grid</a></li>
-                <li><a href="animations.html">Animations</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>What is CSS Grid?</h2>
-            <p>CSS Grid Layout is a two-dimensional layout system for the web. It allows you to create complex and responsive layouts with ease, using rows and columns to define the structure of your content.</p>
-        </section>
-
-        <section>
-            <h2>Key Concepts of CSS Grid</h2>
-            <ul>
-                <li><strong>Grid Container:</strong> The parent element that contains grid items. It is defined by setting the <code>display</code> property to <code>grid</code> or <code>inline-grid</code>.</li>
-                <li><strong>Grid Items:</strong> The child elements of a grid container. They are placed into the grid using various grid properties.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Common CSS Grid Properties</h2>
-            <h3>Grid Container Properties</h3>
-            <ul>
-                <li><code>display: grid;</code></li>
-                <li><code>grid-template-columns</code>: Defines the columns of the grid.</li>
-                <li><code>grid-template-rows</code>: Defines the rows of the grid.</li>
-                <li><code>grid-gap</code>: Defines the gap between grid items.</li>
-                <li><code>justify-items</code>: Aligns grid items along the row axis.</li>
-                <li><code>align-items</code>: Aligns grid items along the column axis.</li>
-            </ul>
-
-            <h3>Grid Item Properties</h3>
-            <ul>
-                <li><code>grid-column</code>: Specifies the column start and end positions for the grid item.</li>
-                <li><code>grid-row</code>: Specifies the row start and end positions for the grid item.</li>
-                <li><code>justify-self</code>: Aligns the grid item within its column.</li>
-                <li><code>align-self</code>: Aligns the grid item within its row.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Example of CSS Grid</h2>
-            <pre><code>
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-}
-
-.item {
-    background-color: lightgray;
-    padding: 20px;
-    text-align: center;
-}
-            </code></pre>
-            <div class="container">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Learn CSS. All
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html">Basics</a></li><li><a href="selectors.html">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html">Flexbox</a></li><li><a href="grid.html" aria-current="page">Grid</a></li><li><a href="animations.html">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap lesson"><div class="hd"><div><p class="kicker">Lesson 5 of 6</p><h1>CSS Grid</h1><p class="lede">Lay out rows and columns together, then let the grid adapt to the screen.</p></div><div class="spec big"><div class="s-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div><section class="lab" data-lab="grid" aria-labelledby="l5"><div><h2 id="l5">Draw a grid</h2>
+<div class="controls js-only"><div class="field"><label for="track">Column tracks</label><select id="track" name="track"><option selected>fr</option><option>minmax</option><option>fixed</option></select></div><div class="field"><label for="cols">Columns <output for="cols" aria-live="off">3</output></label><input type="range" id="cols" name="cols" min="1" max="6" step="1" value="3"></div><div class="field"><label for="gap">gap <output for="gap" aria-live="off">8</output></label><input type="range" id="gap" name="gap" min="0" max="32" step="1" value="8"></div><div class="field"><label for="count">Items <output for="count" aria-live="off">6</output></label><input type="range" id="count" name="count" min="1" max="12" step="1" value="6"></div><div class="field"><label><input type="checkbox" name="span"> Make item 1 span 2 columns</label></div></div>
+<p class="total js-only" id="gsum" role="status" aria-live="polite">3 columns, gap 8px, 6 items.</p><p class="note no-js">Turn on JavaScript for the controls. The grid shows three equal columns.</p></div>
+<div><div class="stage"><div class="gx" style="grid-template-columns:repeat(3,1fr);gap:8px"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i></div></div>
+<pre class="out" tabindex="0" role="region" aria-label="Generated CSS"><code>.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}</code></pre></div></section><h2>Rows and columns together</h2>
+<p>Flexbox lays things out in one direction. Grid does both at once, so use it for whole-page layouts and card walls. <code>1fr</code> means "one share of the free space".</p>
+<h2>A layout that adapts without a media query</h2>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 1rem;
+}</code></pre>
+<p>Choose <b>minmax</b> in the lab above and narrow your window: the columns drop to fit.</p>
+<div class="mistake"><b>Common mistake.</b> Reaching for grid to centre one thing. <code>display: grid; place-items: center;</code> does it in two lines.</div><nav class="pager" aria-label="Next and previous lesson"><a href="flexbox.html"><small>Back</small>Flexbox</a><a href="animations.html"><small>Next lesson</small>Animations</a></nav></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
+</body>
+</html>

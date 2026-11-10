@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animations | Learn CSS</title>
+<meta name="description" content="Learn CSS transitions and keyframe animations, and how to respect reduced-motion settings.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213d'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23f6b98a'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23f2d06b'/%3E%3Crect x='13' y='13' width='6' height='6' fill='%238ebde8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js'</script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Learn<b>CSS</b></a>
+<nav aria-label="Lessons"><ul><li><a href="basics.html">Basics</a></li><li><a href="selectors.html">Selectors</a></li><li><a href="box-model.html">Box model</a></li><li><a href="flexbox.html">Flexbox</a></li><li><a href="grid.html">Grid</a></li><li><a href="animations.html" aria-current="page">Animations</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap lesson"><div class="hd"><div><p class="kicker">Lesson 6 of 6</p><h1>Animations</h1><p class="lede">Make things move, and make sure the people who cannot stand motion can turn it off.</p></div><div class="spec big"><div class="s-anim" aria-hidden="true"><i></i></div></div></div><section class="lab" data-lab="sandbox" aria-labelledby="l6"><div><h2 id="l6">Edit the keyframes</h2>
+<p>Change <code>1s</code> to <code>0.3s</code>, swap <code>ease-in-out</code> for <code>steps(4)</code>, move the ball sideways.</p>
+<label for="css6" class="note">CSS</label><textarea id="css6" rows="17" spellcheck="false" autocapitalize="off">.ball {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #c93a16;
+  animation: hop 1s ease-in-out infinite alternate;
+}
+
+@keyframes hop {
+  from { transform: translateY(0); }
+  to   { transform: translateY(6rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ball { animation: none; }
+}</textarea>
+<div class="row" style="margin-top:.7rem"><button type="button" class="ghost" data-reset>Reset</button></div></div>
+<div><iframe class="pv" title="Live preview" sandbox srcdoc="Turn on JavaScript to edit live."></iframe>
+<template><div class="ball"></div></template></div></section><h2>Transitions and animations</h2>
+<p>A <b>transition</b> eases between two states when something changes, such as a hover. An <b>animation</b> runs on its own from <code>@keyframes</code>.</p>
+<pre class="code" tabindex="0" role="region" aria-label="CSS example"><code>button {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+}</code></pre>
+<h2>Move kindly</h2>
+<p>Some people get ill from motion. Always include the <code>prefers-reduced-motion</code> block you can see in the lab, and animate <code>transform</code> and <code>opacity</code>, which the browser can do cheaply.</p>
+<div class="mistake"><b>Common mistake.</b> Animating <code>width</code>, <code>top</code> or <code>left</code>. They force the browser to recompute layout every frame and stutter. Use <code>transform</code> instead.</div><nav class="pager" aria-label="Next and previous lesson"><a href="grid.html"><small>Back</small>Grid</a><a href="index.html"><small>Done</small>Back to the start</a></nav></div>
+</main>
+<footer class="foot"><div class="wrap"><span>Learn CSS. Free to read, free to copy.</span><span><a href="https://github.com/SolutionsAsService/LearnCSS">Source on GitHub</a> &middot; <a href="CONTRIBUTING.md">Contribute</a></span></div></footer>
+</body>
+</html>
